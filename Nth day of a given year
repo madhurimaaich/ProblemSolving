@@ -1,0 +1,13 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int year=sc.nextInt();
+        int day=sc.nextInt();
+        LocalDate date=LocalDate.ofYearDay(year, day);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+        String formattedDate = date.format(formatter);
+        System.out.println("The" +day+"th of the year"+year+"is" +formattedDate);
+    }
+}
